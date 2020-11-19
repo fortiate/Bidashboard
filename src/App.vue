@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <consumer-analytics></consumer-analytics>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import consumerAnalytics from './components/consumerAnalytics.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    consumerAnalytics
   }
 }
 </script>
