@@ -1,69 +1,105 @@
 <template>
-    <div class="container-fluid" style="background-color: #e5e7e7;">
-           <div class="row"> 
-              <div class="col-md-2">
+    <div class="section" style="background-color: #e5e7e7;">
+        <div class="container is-fullhd">
+           <div class="columns"> 
+              <div class="column is-2">
 
               </div>
            
-              <div class="col-md-10">    
-                <div class="row" style="height: 20px;">
+              <div class="column is-10">    
+                <div class="columns" style="height: 20px;">
 
                 </div>
-                <div class="row" style="height: 20px; margin-left:35px; text-align:left;">
+                <div class="columns" style="height: 20px; margin-left:35px;">
+                    <div class="column">
                     <h4>Consumer Analytics (Credit Cards)</h4>
+                    </div>
                 </div>
-                <div class="row" style="margin-top:20px;">
-                    <div class="col-md-4">
-                        <span class="tile fortiate tile-fort rect-tile">
-                        <span> </span>
-                        </span>
+                <div class="columns" style="margin-top:20px;">
+                    <div class="column is-4">
+                        <Consumers></Consumers>
                     </div>   
               
-                    <div class="col-md-4">
-                        <span class="tile fortiate tile-fort rect-tile">
-                        <span> </span>
-                        </span>
+                    <div class="column is-4">
+                        <Revenue></Revenue>
                     </div>   
 
-                    <div class="col-md-4">
-                        <span class="tile fortiate tile-fort rect-tile">
-                        <span> </span>
-                        </span>
+                    <div class="column is-4">
+                        <CreditLimit></CreditLimit>
                     </div>  
                 </div> 
 
-                <div class="row" style="margin-top:10px">
-                    <div class="col-md-4">
-                        <span class="tile fortiate tile-fort square-tile">
-                        <span> </span>
-                        </span>
+                <div class="columns" style="margin-top:10px">
+                    <div class="column is-4">
+                        <ConsumersByProduct></ConsumersByProduct>
                     </div>   
                  
-                    <div class="col-md-4">
-                        <span class="tile fortiate tile-fort square-tile">
-                        <span> </span>
-                        </span>
+                    <div class="column is-4">
+                        <RevenueSplit></RevenueSplit>
+                        
                     </div>   
                 
-                    <div class="col-md-4">
-                        <span class="tile fortiate tile-fort square-tile">
-                        <span> </span>
-                        </span>
+                    <div class="column is-4">
+                        <CreditLimitByProducts></CreditLimitByProducts>
                     </div>  
                 </div> 
    
-                <div class="row" style="margin-top:10px">
-                    <div class="col-md-12">
-                        <span class="tile fortiate tile-fort long-tile">
+                <div class="columns" style="margin-top:10px">
+                    <div class="column is-12">
+                        <div class="tile fortiate tile-fort long-tile">
                         <span> </span>
-                        </span>
+                        </div>
                     </div> 
                 </div> 
-                <div class="row" style="height:30px;"></div>
+                <div class="columns" style="height:30px;"></div>
               </div>  
          </div>
         </div>
+        </div>
 </template>
+
+<script>
+
+   import Consumers from './Consumers';
+   import Revenue from './Revenue';
+   import CreditLimit from './CreditLimit';
+   import ConsumersByProduct from './ConsumersByProduct'; 
+   import RevenueSplit from './RevenueSplit'; 
+   import CreditLimitByProducts from './CreditLimitByProducts';
+//    import ConsumerChurn from './ConsumerChurn';
+
+   export default {
+    name: 'consumerAnalytics',
+    props: {
+        msg: String
+    },
+    components: {
+        Consumers,
+        Revenue,
+        CreditLimit,
+        ConsumersByProduct,
+        RevenueSplit,
+        CreditLimitByProducts
+
+    },
+    data() {
+
+        return {
+
+            selected: 'Last week',
+
+            options: ['Last week', 'Last month'],
+
+        }
+
+    },
+
+
+
+}
+
+</script>
+
 
 <style>
 
