@@ -2,6 +2,9 @@
   <div id="app">
      
       <retail-payment> </retail-payment>
+      <!-- <consumerAnalytics> </consumerAnalytics> -->
+      <!-- <HelloWorld> </HelloWorld> -->
+
 
     
   </div>
@@ -10,11 +13,14 @@
 <script>
 
 import RetailPayment from './components/RetailPayment/RetailPayment.vue';
-
+//import consumerAnalytics from './components/consumerAnalytics.vue';
+//import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'App',
   components: {
-    RetailPayment
+    RetailPayment,
+    //consumerAnalytics,
+    //HelloWorld
   }
 }
 </script>
